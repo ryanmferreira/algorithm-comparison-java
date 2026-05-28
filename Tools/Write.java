@@ -1,5 +1,8 @@
 import java.io.File;
 import java.io.FileWriter;
+import java.io.BufferedWriter;
+
+import java.io.IOException;
 
 public class Write {
     public static void main(String[] args) {
@@ -8,7 +11,7 @@ public class Write {
                 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
         if (args.length > 0) {
-            int max = Integer.parseInt(args[0]);
+            int limit = Integer.parseInt(args[0]);
 
             try {
                 File folder = new File("Data");
@@ -17,18 +20,19 @@ public class Write {
                     folder.mkdirs();
                 }
 
-                FileWriter fileWriter = new FileWriter("Data/" + max + ".txt");
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Data/" + limit + ".txt"));
 
-                for (int i = 0; i < max; i++) {
+                for (int i = 0; i < limit; i++) {
                     int randomNum = (int) (Math.random() * charArray.length);
-                    fileWriter.write(charArray[randomNum] + ", ");
+                    bufferedWriter.write(charArray[randomNum] + ", ");
                 }
 
-                fileWriter.close();
+                bufferedWriter.close();
 
                 System.out.println("File written successfully inside 'Data' folder.");
-            } catch (Exception e) {
+            } catch (IOException e) {
                 System.out.println("An error occurred while writing to the file.");
+                e.printStackTrace();
             }
         }
     }

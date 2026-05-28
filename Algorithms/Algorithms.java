@@ -3,6 +3,8 @@ package Algorithms;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+import java.io.IOException;
+
 public class Algorithms {
     public static void main(String[] args) {
         if (args.length < 2) {
@@ -34,7 +36,7 @@ public class Algorithms {
                 System.out.println("The file is empty.");
                 return;
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println("Error reading the file: " + e.getMessage());
             return;
         }
@@ -49,7 +51,7 @@ public class Algorithms {
                 start = System.nanoTime();
                 bubble.sort();
                 end = System.nanoTime();
-                // bubble.show();
+                bubble.show();
                 CountTime("Bubble Sort", start, end);
                 break;
             case 2:
@@ -57,7 +59,7 @@ public class Algorithms {
                 start = System.nanoTime();
                 insertion.sort();
                 end = System.nanoTime();
-                // insertion.show();
+                insertion.show();
                 CountTime("Insertion Sort", start, end);
                 break;
             case 3:
@@ -65,7 +67,7 @@ public class Algorithms {
                 start = System.nanoTime();
                 selection.sort();
                 end = System.nanoTime();
-                // selection.show();
+                selection.show();
                 CountTime("Selection Sort", start, end);
                 break;
             case 4:
@@ -73,7 +75,7 @@ public class Algorithms {
                 start = System.nanoTime();
                 quickSort.sort();
                 end = System.nanoTime();
-                // quickSort.show();
+                quickSort.show();
                 CountTime("Quick Sort", start, end);
                 break;
             case 5:
@@ -81,7 +83,7 @@ public class Algorithms {
                 start = System.nanoTime();
                 heapSort.sort();
                 end = System.nanoTime();
-                // heapSort.show();
+                heapSort.show();
                 CountTime("Heap Sort", start, end);
                 break;
             default:
