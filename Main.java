@@ -1,11 +1,15 @@
-package Algorithms;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 
 import java.io.IOException;
 
-public class Algorithms {
+import Algorithms.BubbleSort;
+import Algorithms.HeapSort;
+import Algorithms.InsertionSort;
+import Algorithms.QuickSort;
+import Algorithms.SelectionSort;
+
+public class Main {
     public static void main(String[] args) {
         if (args.length < 2) {
             System.out.println("Usage: java Algorithms <file_path> <algorithm_number>");

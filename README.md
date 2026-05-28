@@ -13,7 +13,6 @@
 ```bash
 .
 ├── Algorithms
-│   ├── Algorithms.java
 │   ├── BubbleSort.java
 │   ├── HeapSort.java
 │   ├── InsertionSort.java
@@ -29,6 +28,7 @@
 ├── Docs
 │   ├── AlgorithmsComparison.xlsx
 │   └── ResultsAnalysis.docx
+├── Main.java
 ├── README.md
 └── Tools
     └── Write.java
